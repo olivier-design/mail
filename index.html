@@ -7,12 +7,54 @@
     <script>
         function copyEmail() {
             navigator.clipboard.writeText("olivierlehner.contact@gmail.com")
-                .then(() => alert("E-mail skopiowany!"));
+                .then(() => console.log("E-mail skopiowany!"));
         }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .bold-text {
+            font-weight: 800;
+            font-size: 24px;
+        }
+        .semi-bold-text {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        button {
+            background: none;
+            border: none;
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body onload="copyEmail()">
-    <h2>Automatycznie skopiowano e-mail do schowka!</h2>
-    <p>Jeśli się nie skopiowało, kliknij <button onclick="copyEmail()">tutaj</button>.</p>
+    <div class="container">
+        <p class="bold-text">
+            Automatycznie skopiowano e-mail (olivierlehner.contact@gmail.com) do schowka!
+        </p>
+        <p class="semi-bold-text">
+            Jeśli się nie skopiowało, kliknij <button onclick="copyEmail()">tutaj</button>.
+        </p>
+    </div>
 </body>
 </html>
