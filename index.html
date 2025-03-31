@@ -7,7 +7,7 @@
     <script>
         function copyEmail() {
             navigator.clipboard.writeText("olivierlehner.contact@gmail.com")
-                .then(() => console.log("E-mail skopiowany!"));
+                .then(() => alert("Skopiowano e-mail do schowka"));
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,800&display=swap" rel="stylesheet">
@@ -27,15 +27,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
+            max-width: 90%;
         }
         .bold-text {
             font-weight: 800;
-            font-size: 24px;
+            font-size: 36px;
+            word-wrap: break-word;
+            text-align: center;
+            width: 100%;
         }
         .semi-bold-text {
             font-weight: 600;
-            font-size: 18px;
+            font-size: 22px;
         }
         button {
             background: none;
@@ -44,7 +48,7 @@
             text-decoration: underline;
             cursor: pointer;
             font-weight: 600;
-            font-size: 18px;
+            font-size: 22px;
         }
     </style>
 </head>
