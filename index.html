@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skopiuj e-mail</title>
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("olivierlehner.contact@gmail.com")
+                .then(() => alert("E-mail skopiowany!"));
+        }
+    </script>
+</head>
+<body onload="copyEmail()">
+    <h2>Automatycznie skopiowano e-mail do schowka!</h2>
+    <p>Jeśli się nie skopiowało, kliknij <button onclick="copyEmail()">tutaj</button>.</p>
+</body>
+</html>
