@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skopiuj e-mail</title>
+    <title>Copy Email</title>
     <script>
         function copyEmail() {
             navigator.clipboard.writeText("olivierlehner.contact@gmail.com")
-                .then(() => alert("Skopiowano e-mail do schowka"));
+                .then(() => alert("Email copied to clipboard"));
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,800&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px; /* Zmniejszony odstęp */
+            gap: 10px;
             max-width: 90%;
         }
         .bold-text {
@@ -40,7 +40,7 @@
         .semi-bold-text {
             font-weight: 600;
             font-size: 22px;
-            margin-top: 0; /* Usunięcie dodatkowego odstępu */
+            margin-top: 0;
         }
         button {
             background: none;
@@ -56,10 +56,10 @@
 <body onload="copyEmail()">
     <div class="container">
         <p class="bold-text">
-            Automatycznie skopiowano e-mail (olivierlehner.contact@gmail.com) do schowka!
+            Email (olivierlehner.contact@gmail.com) has been copied to the clipboard!
         </p>
         <p class="semi-bold-text">
-            Jeśli się nie skopiowało, kliknij <button onclick="copyEmail()">tutaj</button>
+            If it didn't copy, click <button onclick="copyEmail()">here</button>.
         </p>
     </div>
 </body>
