@@ -1,74 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Copy Email</title>
-  <script>
-    function copyEmail(silent = false) {
-      navigator.clipboard.writeText("olivierlehner.contact@gmail.com")
-        .then(() => {
-          if (!silent) alert("Email copied to clipboard!");
-          window.close(); // próba zamknięcia strony
-        })
-        .catch(err => {
-          if (!silent) alert("Copy failed: " + err);
-        });
-    }
-    window.onload = () => copyEmail(true);
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-      font-family: "Poppins", sans-serif;
-      background-color: #171717;
-      color: #FFFFFF;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      max-width: 90%;
-    }
-    .bold-text {
-      font-weight: 800;
-      font-size: 36px;
-      word-wrap: break-word;
-      text-align: center;
-      width: 100%;
-    }
-    .semi-bold-text {
-      font-weight: 600;
-      font-size: 22px;
-      margin-top: 0;
-      line-height: 1.2;
-    }
-    button {
-      background: none;
-      border: none;
-      color: #8F00FF;
-      text-decoration: underline;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 22px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Email</title>
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("olivierlehner.contact@gmail.com")
+                .then(() => alert("Email copied to clipboard"));
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+            background-color: #171717;
+            color: #FFFFFF;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            max-width: 90%;
+        }
+        .bold-text {
+            font-weight: 800;
+            font-size: 36px;
+            word-wrap: break-word;
+            text-align: center;
+            width: 100%;
+        }
+        .semi-bold-text {
+            font-weight: 600;
+            font-size: 22px;
+            margin-top: 0;
+        }
+        button {
+            background: none;
+            border: none;
+            color: #8F00FF;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 22px;
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <p class="bold-text">
-      Email (olivierlehner.contact@gmail.com) has been copied to the clipboard!
-    </p>
-    <p class="semi-bold-text">
-      If it didn't copy, click <button onclick="copyEmail()">here</button>
-    </p>
-  </div>
+<body onload="copyEmail()">
+    <div class="container">
+        <p class="bold-text">
+            Email (olivierlehner.contact@gmail.com) has been copied to the clipboard!
+        </p>
+        <p class="semi-bold-text">
+            If it didn't copy, click <button onclick="copyEmail()">here</button>
+        </p>
+    </div>
 </body>
 </html>
